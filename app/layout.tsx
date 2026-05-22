@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
 import { InquiryProvider } from "@/context/InquiryContext";
@@ -19,6 +20,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GYDLDLYP53"
+        />
+
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GYDLDLYP53');
+          `}
+        </Script>
         <InquiryProvider>
           <TopNav />
           {children}

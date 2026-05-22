@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/2-day-trips/layout,_N_T_/2-day-trips/page,_N_T_/2-day-trips"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/2-day-trips/__PAGE__",
+    "/2-day-trips",
+    "/_index",
+    "/_head"
+  ]
+}

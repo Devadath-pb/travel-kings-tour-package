@@ -1,0 +1,15 @@
+{
+  "/1-day-trips/page": "app/1-day-trips/page.js",
+  "/2-day-trips/page": "app/2-day-trips/page.js",
+  "/3-day-trips/page": "app/3-day-trips/page.js",
+  "/4-day-trips/page": "app/4-day-trips/page.js",
+  "/5-day-trips/page": "app/5-day-trips/page.js",
+  "/6-day-trips/page": "app/6-day-trips/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/terms/page": "app/terms/page.js"
+}

@@ -10,7 +10,8 @@ import { AboutSection } from "../sections/AboutSection";
 import { ContactSection } from "../sections/ContactSection";
 import { FooterSection } from "../sections/FooterSection";
 import { tripCategories } from "../data/trips";
-import { seo, useSEO } from "../lib/seo";
+import { seo } from "../lib/seo";
+import { useSEO } from "../hooks/useSEO";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 ScrollTrigger.config({ ignoreMobileResize: true });

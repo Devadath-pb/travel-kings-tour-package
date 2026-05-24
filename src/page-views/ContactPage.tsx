@@ -6,7 +6,8 @@ import { gsap } from "gsap";
 import { useInquiry } from "../context/InquiryContext";
 import { getAllDestinationOptions } from "../data/trips";
 import { FooterSection } from "../sections/FooterSection";
-import { seo, useSEO } from "../lib/seo";
+import { seo } from "../lib/seo";
+import { useSEO } from "../hooks/useSEO";
 import {
   ArrowLeft,
   Mail,

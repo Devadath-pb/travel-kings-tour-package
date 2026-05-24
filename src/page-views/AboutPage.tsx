@@ -7,7 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ContactSection } from "../sections/ContactSection";
 import { FooterSection } from "../sections/FooterSection";
 import { OptimizedImage } from "../components/OptimizedImage";
-import { seo, useSEO } from "../lib/seo";
+import { seo } from "../lib/seo";
+import { useSEO } from "../hooks/useSEO";
 import { ArrowLeft, Heart, Globe, Shield, Star } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FooterSection } from "../sections/FooterSection";
-import { seo, useSEO } from "../lib/seo";
+import { seo } from "../lib/seo";
+import { useSEO } from "../hooks/useSEO";
 
 const privacySections = [
   {

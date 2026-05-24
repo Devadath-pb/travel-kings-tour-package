@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import LegalPage from "@/page-views/LegalPage";
-import { seo, siteUrl } from "@/lib/seo";
+import { getTripSeo } from "../../src/lib/seo";
+import { siteUrl } from "../seo/seoUtils";
 
-const cfg = seo.terms;
+const slug = "5-day-trips";
+const cfg = getTripSeo(slug);
 
 export const metadata: Metadata = {
   title: cfg.title,
@@ -15,17 +16,13 @@ export const metadata: Metadata = {
     title: cfg.title,
     description: cfg.description,
     url: `${siteUrl}${cfg.path}`,
-    type: "website",
-    images: [{ url: cfg.image, alt: cfg.title }]
+    type: cfg.type || "website",
+    images: cfg.image ? [{ url: cfg.image, alt: cfg.title }] : []
   },
   twitter: {
     card: "summary_large_image",
     title: cfg.title,
     description: cfg.description,
-    images: [cfg.image]
+    images: cfg.image ? [cfg.image] : []
   }
 };
-
-export default function Page() {
-  return <LegalPage pageType="terms" />;
-}

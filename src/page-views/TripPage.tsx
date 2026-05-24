@@ -7,9 +7,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getCategoryBySlug } from "../data/trips";
 import { DestinationCard } from "../components/DestinationCard";
 import { OptimizedImage } from "../components/OptimizedImage";
-import { getTripSeo, useSEO } from "../lib/seo";
-import { ContactSection } from "../sections/ContactSection";
+import { getTripSeo } from "../lib/seo";
+import { useSEO } from "../hooks/useSEO";
+import { siteUrl } from "../lib/seo";
+import { BreadcrumbStructuredData } from "../../components/BreadcrumbStructuredData";
+import { TripStructuredData } from "../../components/TripStructuredData";
 import { FooterSection } from "../sections/FooterSection";
+import { ContactSection } from "../sections/ContactSection";
 import { ArrowLeft } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -149,7 +153,17 @@ export default function TripPage({ slug }: TripPageProps) {
         </div>
       </section>
 
-      {/* Intro */}
+      {/* Structured Data */}
+      <BreadcrumbStructuredData items={[
+        { name: "Home", url: siteUrl },
+        { name: category.title, url: `${siteUrl}/${category.slug}` },
+      ]} />
+      <TripStructuredData
+        title={category.title}
+        description={category.description}
+        image={category.cardImage}
+        destinations={category.destinations}
+      />
       <section ref={introRef} className="py-12 md:py-16 px-6 md:px-[6vw]">
         <div className="max-w-[1200px] mx-auto">
           <p className="font-body text-sm md:text-base text-brand-muted leading-relaxed max-w-[700px]">
